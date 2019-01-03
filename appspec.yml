@@ -1,0 +1,10 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/centos/ghumman/nodejs/
+hooks:
+  AfterInstall:
+    - location: systemctl restart nodejs_app
+      runas: root
+      timeout: 300
